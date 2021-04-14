@@ -1,0 +1,24 @@
+{
+  "name": "webpack-5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^5.32.0",
+    "webpack-cli": "^4.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jane-js-003/Webpack-5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jane-js-003/Webpack-5/issues"
+  },
+  "homepage": "https://github.com/Jane-js-003/Webpack-5#readme"
+}
