@@ -12,6 +12,7 @@ module.exports = {
   // 为了提高性能，使用的是内存文件系统
   // devServer默认情况下会读取打包后的路径，其实静态文件的根目录是可以有多个的
   devServer: {
+    // 启动的时候会优先寻找output的配置路径，如果没有再执行这里的配置
     contentBase: resolve(__dirname, 'dist'),
     compress: true, // 是否启动压缩
     writeToDisk: true, // 如果你指定此选项，也会把打包后的文件写入硬盘一份（即生成打包后的dist文件夹,写入硬盘为了方便看，方便调整）
@@ -20,7 +21,10 @@ module.exports = {
   },
   module: {
     rules: [
-      {test:/\.txt$/, use:'raw-loader'}
+      {test:/\.txt$/, use:'raw-loader'},
+      {test:/\.css$/, use:['style-loader', 'css-loader']},
+      {test:/\.less$/, use:['style-loader', 'css-loader', 'less-loader']},
+      {test:/\.scss$/, use:['style-loader', 'css-loader', 'sass-loader']}
     ]
   },
   plugins: [ // 插件
